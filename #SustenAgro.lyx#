@@ -2757,9 +2757,33 @@ ar outros tipos de tecnologias baseadas em conhecimento para definir um
 \end_layout
 
 \begin_layout Standard
-O desenvolvimento do SAD SustenAgro, em cooperação com a Embrapa Meio Ambiente,
+Este SAD SustenAgro foi avaliado como uma contribuição inédita, porque permite
+ fornece funcionalidades que não estão em outras ferramentas.
+ Também o SAD SustenAgro pode ser aplicado a outros sistemas agrícolas,
+ o que poderia suportar melhoras na produção de alimentos e produtos neste
+ setor 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Matthews2008149"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+O possível impacto que gera o correto uso dos SAD 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lee2008349"
+
+\end_inset
+
+.
+ O desenvolvimento do SAD SustenAgro, em cooperação com a Embrapa Meio Ambiente,
  poderia gerar impacto positivo na produção agrícola, já que ele fornece
  a funcionalidade de avaliar a sustentabilidade na cana-de-açúcar.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2773,30 +2797,6 @@ key "Storquato2015"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Este SAD SustenAgro foi avaliado como uma contribuição inédita, porque permite
- fornece funcionalidades que não estão em outras ferramentas.
- Também o SAD SustenAgro pode ser aplicado a outros sistemas agrícolas,
- o que poderia suportar melhoras na produção de alimentos e produtos neste
- setor 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Matthews2008149"
-
-\end_inset
-
-.
- Se o SAD é usado da maneira correta poderia gerar um possível impacto positivo
- no Sistema produtivo de cana-de-açúcar do centro-sul do Brasil 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Lee2008349"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Section
