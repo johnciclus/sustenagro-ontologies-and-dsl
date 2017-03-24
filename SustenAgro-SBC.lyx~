@@ -26,7 +26,7 @@ urlcolor=blue
 
 \title{SustenAgro Sistema de Apoio à Decisão baseado em Ontologias e definido por uma Linguagem de Domínio Especifico.}
 
-\author{John F. Garavito S.\inst{1}, Dilvan de A. Moreria\inst{1} e Katia R. Evaristo\inst{2}}
+\author{John F. Garavito S.\inst{1}, Katia R. Evaristo\inst{2} e  Dilvan A. Moreira\inst{1}}
 
 
 \address{INSTITUTO DE CIÊNCIAS MATEMÁTICAS E DE COMPUTAÇÃO\\
@@ -36,7 +36,7 @@ urlcolor=blue
 \nextinstitute
   Embrapa Meio Ambiente\\
   Jaguariúna, SP, Brazil
-  \email{john.gar.sua@usp.br, dilvan@icmc.usp.br, katia.jesus@embrapa.br}
+  \email{john.gar.sua@usp.br, katia.jesus@embrapa.br, dilvan@icmc.usp.br}
 }
 
 \providecommand{\keywords}[1]{\textbf{\textit{Keywords: }} #1}
@@ -187,9 +187,10 @@ begin{resumo}
 
  O processo de avaliação da sustentabilidade em agricultura é caracterizado
  pela complexidade, interdisciplinariedade e continua mudança.
- Pelo qual especialistas em sustentabilidade da Embrapa Meio Ambiente definiram
- o método SustenAgro de avaliação da sustentabilidade em cana-de-açúcar.
- A implementação deste método no Sistema de Apoio à Decisão (SAD 
+ Especialistas em sustentabilidade da Embrapa Meio Ambiente definiram o
+ método SustenAgro de avaliação da sustentabilidade em sistemas produtivos
+ de cana-de-açúcar na região centro-sul do Brasil.
+ A implementação desse método no Sistema de Apoio à Decisão (SAD 
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "SAD"
@@ -197,8 +198,8 @@ description "Sistema de Apoio à Decisão"
 
 \end_inset
 
-) intitulado SustenAgro, permitiu identificar o problema da inexistência
- de um meio de representação de conhecimento para definir SADs de avaliação.
+) SustenAgro, permitiu identificar o problema da inexistência de um meio
+ de representação de conhecimento para definir SADs de avaliação.
  Em este artigo, apresentamos um método de definição do conhecimento dos
  especialistas implementado no do SAD SustenAgro, que foi baseado em uma
  ontologia da web Semântica e uma 
@@ -258,9 +259,20 @@ Introdução
 \end_layout
 
 \begin_layout Standard
-Os especialistas da Embrapa Meio Ambiente desenvolveram o método SustenAgro
- que permite avaliar a sustentabilidade no sistema produtivo de cana-de-açúcar
- no centro-sul do Brasil 
+O setor produtivo produtivo da cana-de-açúcar é extremamente importante
+ para a economia do estado de São Paulo e do Brasil, devido ao fato de ser
+ uma das principais culturas produzidas no país 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Storquato2015"
+
+\end_inset
+
+.
+ Por essa razão, especialistas da Embrapa Meio Ambiente desenvolveram o
+ método de avaliação SustenAgro, que permite avaliar a sustentabilidade
+ em sistemas produtivos de cana-de-açúcar na região centro-sul do Brasil
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "oliveira:2013"
@@ -268,30 +280,21 @@ key "oliveira:2013"
 \end_inset
 
 .
+ Para implementar esse método, na forma de um Sistema de Apoio a Decisão
+ (SAD) online, foi desenvolvida uma metodologia para definir SADs de avaliação
+ com uma representação de conhecimento em um formato computável, entendível
+ e acessível por especialistas do domínio.
+ Já que não foram encontrados na literatura trabalhos sobre esse tipo de
+ metodologia.
 \end_layout
 
 \begin_layout Standard
-Este método foi implementado para fornecer um SAD 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Tweedale2016"
-
-\end_inset
-
- na web, que permita avaliar a sustentabilidade.
- A partir desta experiencia foi identificado o problema da inexistência
- de um meio de representação de conhecimento para definir SADs de avaliação,
- que tenha um formato computável, entendível e acessível pelos especialistas
- do domínio.
-\end_layout
-
-\begin_layout Standard
-No presente trabalho é proposto um método de definição de conhecimento dos
- especialistas no SAD SustenAgro que permite definir as funcionalidades
+No presente trabalho, é proposto um método de definição do conhecimento,
+ dos especialistas no SAD SustenAgro, que permite definir as funcionalidades
  desse SAD.
  O método de definição está baseado em uma ontologia e uma 
 \lang english
-DSL
+Domain Specific Language (DSL)
 \lang brazilian
  
 \begin_inset CommandInset citation
@@ -300,28 +303,22 @@ key "fowler2010domain"
 
 \end_inset
 
- desenvolvida para suportar os conceitos de avaliação da sustentabilidade
- em agricultura.
+ desenvolvidas para suportar conceitos de avaliação da sustentabilidade
+ na agricultura.
+ Também são mostrados resultados da avaliação desse método.
+ por especialistas da Embrapa, mostrando a sua eficiencia na criação de
+ um SAD.
 \end_layout
 
 \begin_layout Standard
-Este artigo esta organizado da seguinte forma.
- Seção 
+Este artigo está organizado da seguinte forma: Seção 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Objetivo"
 
 \end_inset
 
- apresenta o objetivo desenvolvido na pesquisa.
- Seção 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Trabalhos-relacionados"
-
-\end_inset
-
- apresenta os trabalhos relacionados.
+ apresenta o objetivo desenvolvido na pesquisa e trabalhos relacionados.
  Seção 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -329,7 +326,7 @@ reference "sec:SAD-SustenAgro"
 
 \end_inset
 
- descreve a metodologia composta das ontologias e das DSLs.
+ descreve a metodologia proposta, as ontologias e as DSLs.
  Seção 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -345,27 +342,18 @@ reference "sec:Resultados"
 
 \end_inset
 
- apresenta os resultados.
- Seção 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Discussão"
-
-\end_inset
-
- apresentara uma discussão.
- Seção 
+ apresenta os resultados e a Seção 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Conclusões"
 
 \end_inset
 
- apresentara as conclusões.
+ apresenta as conclusões.
 \end_layout
 
 \begin_layout Section
-Objetivo
+Objetivo e Trabalhos relacionados
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Objetivo"
@@ -376,33 +364,24 @@ name "sec:Objetivo"
 \end_layout
 
 \begin_layout Standard
-O objetivo deste trabalho foi suportar e facilitar a definição de conhecimento
- dos especialistas em sustentabilidade no SAD SustenAgro.
+O objetivo deste trabalho foi desenvolver uma metodologia para SADs que
+ suporte e facilite a definição de conhecimento por especialistas de domínio,
+ mais especificamente do domínio de sustentabilidade em agricultura.
  
 \end_layout
 
 \begin_layout Standard
-Para cumprir este objetivo foi desenvolvido um método baseado em uma ontologia
- da web semântica e em uma DSL, que em conjunto permitem definir o conhecimento
- de avaliação de sustentabilidade em forma computável por parte dos especialista
-s em sustentabilidade.
-\end_layout
-
-\begin_layout Section
-Trabalhos relacionados
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Trabalhos-relacionados"
-
-\end_inset
-
-
+Para cumprir esse objetivo, foi desenvolvido um método baseado em ontologias
+ e DSLs que, em conjunto, permitem definir o conhecimento de avaliação de
+ sustentabilidade em forma computável.
+ Além disso, esse método deve permitir a modificação desse conhecimento
+ diretamente por especialistas em sustentabilidade.
 \end_layout
 
 \begin_layout Standard
-Os Sistemas de apoio à decisão, tem usado ontologias para suportar varias
- fases do processo de decisão como: a organização dos dados, o processamento
- deles e a representação da informação produzida 
+SADs têm usado ontologias para suportar várias fases do processo de decisão
+ como: a organização dos dados, seu processamento e a representação da informaçã
+o produzida 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Rospocher:2012:ODS:2887638.2887644"
@@ -419,11 +398,11 @@ key "roussey2010ontologies,Janssen2009573"
 
 \end_inset
 
- afirmam o uso de ontologias em várias subáreas da agricultura e como elas
- tem melhorado as capacidades dos sistemas de informação, principalmente
+ reportam o uso de ontologias em várias subáreas da agricultura e como elas
+ têm melhorado as capacidades dos sistemas de informação, principalmente
  na modelagem e na interoperabilidade de sistemas.
- Este trabalho confirma que o uso de ontologias traz varias vantagens para
- abordar o problema identificado.
+ Esse trabalho confirma que o uso de ontologias trás várias vantagens para
+ o problema de representação de conhecimentos em SADs.
 \end_layout
 
 \begin_layout Standard
@@ -434,9 +413,9 @@ key "Abt2009"
 \end_inset
 
  apresenta uma proposta para modelar conceitualmente fazendas para desenvolver
- sistemas de gerenciamento das fazendas abrangendo mais complexidade do
- domínio, e assim melhorar o sistema produtivo principalmente em aspectos
- de sustentabilidade.
+ sistemas de gerenciamento que abrangem maiores complexidade do domínio.
+ O objetivo é melhorar o sistema produtivo, principalmente em aspectos de
+ sustentabilidade.
 \end_layout
 
 \begin_layout Standard
@@ -446,12 +425,12 @@ key "Bonacin:2013:CIA:2536146.2536185"
 
 \end_inset
 
- apresentam uma ontologia sobre a Agricultura em Recursos Hídricos que tem
+ apresentam uma ontologia sobre recursos hídricos na agricultura que tem
  o objetivo de fornecer um meio de recuperação e compartilhamento do conheciment
-o dos especialistas.
- Este trabalho tem o objetivo de fornecer um meio de representação de conhecimen
-to em agricultura, mas não é abordado como facilitar o uso desse meio para
- especialistas sem conhecimento de modelagem.
+o de especialistas.
+ Esse trabalho tem o objetivo de fornecer um meio de representação de conhecimen
+to em agricultura, mas não aborda maneiras de facilitar seu uso por especialista
+s sem conhecimento de modelagem.
 \end_layout
 
 \begin_layout Standard
@@ -463,9 +442,9 @@ key "soulignac2012knowledge"
 
  apresenta um sistema de gestão de conhecimento que fornece serviços computacion
 ais para selecionar e formalizar o conhecimento em agricultura orgânica.
- Este trabalho abrange técnicas para formalizar o conhecimento agrícola
- com a visão de fornecer informações que ajudem a tomar decisões a adotar
- praticas sustentáveis.
+ Esse trabalho abrange técnicas para formalizar o conhecimento agrícola
+ com a visão de fornecer informações que ajudem a tomar decisões e a adotar
+ práticas sustentáveis.
 \end_layout
 
 \begin_layout Standard
@@ -475,22 +454,18 @@ key "kumazawa2009toward"
 
 \end_inset
 
- apresenta que na ciência da sustentabilidade é necessário criar meios que
- permitam definir conhecimento estruturado, e demostra que as ontologias
+ advoga que, na ciência da sustentabilidade, é necessário criar meios que
+ permitam definir conhecimento estruturado e demostra que as ontologias
  fornecem o suporte para isso.
- Este trabalho confirma que as ontologias são o meio de representação de
- conhecimento que é requerido em SustenAgro, devido a que a proposta é focada
+ Ele confirma que as ontologias podem ser o meio de representação de conheciment
+o que é requerido em sistemas como o SustenAgro, já que a proposta é focada
  em sustentabilidade.
  
 \end_layout
 
 \begin_layout Standard
-Durante a pesquisa foram procurados trabalhos sobre 
-\lang english
-Domain-Specific Languages
-\lang brazilian
- em agricultura e com DSL e não foram identificados trabalhos relevantes
- para nosso objeto de pesquisa.
+Durante a pesquisa bibliográfica, procurou-se trabalhos sobre DSLs em agricultur
+a e não foram identificados trabalhos relevantes para nosso objeto de pesquisa.
 \end_layout
 
 \begin_layout Section
@@ -506,15 +481,15 @@ name "sec:SAD-SustenAgro"
 
 \begin_layout Standard
 O SAD SustenAgro implementa o método SustenAgro suportando a avaliação da
- sustentabilidade no sistema produtivo de cana-de-açúcar e fornece recomendações
- para que os usuários tomem decisões em vários aspectos das unidades produtivas
+ sustentabilidade em sistemas produtivos de cana-de-açúcar e fornece recomendaçõ
+es para que usuários tomem decisões em vários aspectos das unidades produtivas
  (usinas e fazendas produtoras).
 \end_layout
 
 \begin_layout Standard
-As metodologias de avaliação da sustentabilidade envolvem varias áreas de
+As metodologias de avaliação da sustentabilidade envolvem várias áreas de
  conhecimento e processos específicos que requerem ajuda computacional para
- garantir a correta aplicação delas 
+ garantir a sua correta aplicação 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Singh2012281"
@@ -522,7 +497,7 @@ key "Singh2012281"
 \end_inset
 
 .
- A definição de indicadores é uma pratica das metodologias de avaliação
+ A definição de indicadores é uma prática das metodologias de avaliação
  do setor agrícola 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -540,7 +515,8 @@ key "oliveira:2013"
 
 \end_inset
 
-, eles são processados para gerar índices e recomendações que permitam avaliar
+.
+ Eles são processados para gerar índices e recomendações que permitam avaliar
  a sustentabilidade e suportar a tomada decisões.
 \end_layout
 
@@ -551,25 +527,27 @@ key "Evans:2003:DDT:861502"
 
 \end_inset
 
- explica que no desenvolvimento de software existe a necessidade de modelar
- o conhecimento chave de um domínio em um modelo, para permitir a comunicação
- e colaboração entre especialistas de domínio e os desenvolvedores.
- Pelo qual o modelo de representação de conhecimento dos especialistas foi
- o objeto de pesquisa, a procura de sistemas de representação de conhecimento
- permitiu identificar que as ontologias da web semântica satisfazem tais
- requisitos de modelagem 
+ explica que, no desenvolvimento de software, existe a necessidade de criar
+ um modelo do conhecimento chave de um domínio para permitir a comunicação
+ e colaboração entre especialistas desse domínio e desenvolvedores de software.
+ Por isso, o modelo de representação de conhecimento dos especialistas foi
+ o objeto dessa pesquisa.
+ A procura por sistemas de representação de conhecimento permitiu identificar
+ que as ontologias da web semântica satisfazem tais requisitos de modelagem
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "bernerslee2001"
 
 \end_inset
 
-.
+, além de serem baseadas numa linguagem padrões (Web Ontology Language -
+ OWL).
 \end_layout
 
 \begin_layout Standard
 As ontologias representam a complexidade do conhecimento dos especialistas
- deste domínio 
+ de um domínio 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "simon1991architecture"
@@ -577,16 +555,19 @@ key "simon1991architecture"
 \end_inset
 
 , integram o conhecimento de diferentes fontes e flexibilizam os modelos
- ante as mudanças.
- Porém, devido à exigência de conhecimento de modelagem de ontologias, foram
- procurados outros métodos que complementem a definição de conhecimento
- por parte dos especialistas.
+ ante mudanças.
+ Porém, para se ter um SAD, é necessário, além do conhecimento, uma maneira
+ de codificar como o SAD se comportará, que dados da ontologia serão mostrados,
+ como o modelo de sustentabilidade é calculado e como as avaliações serão
+ mostradas aos usuários finais.
+ Foram procurados outros métodos que complementassem a definição de conhecimento
+, por parte dos especialistas.
 \end_layout
 
 \begin_layout Standard
-Nessa procura, foram identificadas as DSL, como um complemento à ontologia
- devido a que permite um uso mais próximo do domínio do especialista, ao
- desenvolver uma linguagem com termos deles.
+Nessa procura, foram identificadas as DSL, como um complemento às ontologias.
+ Elas permitem a definição de comportamento numa linguagem mais próximo
+ dos termos usados por especialistas de somínio.
 \end_layout
 
 \begin_layout Subsection
@@ -594,11 +575,12 @@ Metodologia
 \end_layout
 
 \begin_layout Standard
-A metodologia que direcionou o desenvolvimento do SAD SustenAgro foi 
+A metodologia de desenvolvimento de software que direcionou o desenvolvimento
+ do SAD SustenAgro foi a 
 \lang english
 SCRUM
 \lang brazilian
- permitindo integrar praticas ágeis no desenvolvimento do sistema 
+, que permitiu o uso de praticas ágeis no desenvolvimento do sistema 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "schwaber2002gile"
@@ -611,11 +593,11 @@ key "schwaber2002gile"
 \begin_layout Standard
 A metodologia de desenvolvimento das 
 \lang english
-web User Interfaces (
+Web User Interfaces (
 \lang brazilian
-web UI
+Web UI
 \lang english
-)
+s)
 \lang brazilian
  foi dirigida por meio do enfoque 
 \lang english
@@ -642,8 +624,9 @@ Mockups
 \end_layout
 
 \begin_layout Standard
-O componente mais importante do SAD SustenAgro é a ontologia da web semântica,
- começou com a definição de mapas conceituais por meio da ferramenta 
+O componente mais importante do SAD SustenAgro é a ontologia SustenAgro.
+ Ela começou com a definição de mapas conceituais, por meio da ferramenta
+ 
 \lang english
 Cmap Tools
 \lang brazilian
@@ -652,7 +635,6 @@ Cmap Tools
 status open
 
 \begin_layout Plain Layout
-website Cmap Tools 
 \begin_inset Flex URL
 status open
 
@@ -670,29 +652,25 @@ http://cmap.ihmc.us/
 
 .
  Os mapas conceituas foram definidos com o acompanhamento de um especialista
- em modelagem de conhecimento da Embrapa Informática Agropecuária, depois
- modeladas em formato 
+ em modelagem de conhecimento da Embrapa Informática Agropecuária.
+ A versão final, em formato 
 \lang english
-OWL
+OWL,
 \lang brazilian
- na ferramenta Protégé
+ foi produzida usando a ferramenta Protégé
 \begin_inset CommandInset citation
 LatexCommand cite
 key "musen2015protege"
 
 \end_inset
 
-, instanciadas em 
-\lang english
-triplestores
-\lang brazilian
- e finalmente integradas no SAD SustenAgro que está implementado sobre o
- banco de dados baseado em grafos Blazegraph
+.
+ Ela foi integradas no SAD SustenAgro, que usa a triplestore (um banco de
+ dados baseado em grafos) Blazegraph
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-website Blazegraph 
 \begin_inset Flex URL
 status open
 
@@ -708,36 +686,26 @@ https://www.blazegraph.com/
 
 \end_inset
 
- compatível com 
-\lang english
-SPARQL/RDF
-\lang brazilian
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "prud2006sparql"
-
-\end_inset
-
-.
+ .
 \end_layout
 
 \begin_layout Standard
-Após realizada a modelagem e definir ela em um formato computável, o especialist
-a do domínio definiu perguntas de interesse, com as quais os modeladores
- definiram consultas que o sistema deverá responder segundo os resultados
- esperados, conseguindo validar e ajustar o modelo até ter um protótipo
- confiável.
+Após realizada a modelagem da ontologia e sua definição em um formato computável
+ (arquivo em OWL), o especialista de domínio definiu perguntas de interesse
+ com as respostas esperadas.
+ Baseados nelas, foram definidas consultas para o sistema, que respondeu
+ com os resultados esperados, depois de ajustes no modelo.
+ Esse processo levou a um protótipo confiável.
 \end_layout
 
 \begin_layout Subsection*
-Componentes de SustenAgro
+Componentes do SustenAgro
 \end_layout
 
 \begin_layout Standard
-Os SAD geralmente recebem uma entrada, fazem o processamento dela e retorna
- resultados que são analisadas pelo tomador(es) de decisão a través da tecnologi
-a computacional 
+Os SAD geralmente recebem uma entrada, fazem o processamento da mesma e
+ retorna resultados que são analisadas pelo(s) tomador(es) de decisão, através
+ de tecnologia computacional 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Tweedale2016"
@@ -745,13 +713,17 @@ key "Tweedale2016"
 \end_inset
 
 .
- O SAD SustenAgro complementa  esta definição por meio de ontologias que
- servem para representar o conhecimento de especialistas do domínio e DSLs
- que servem para customizar o comportamento dos SADs
-\end_layout
+ O SAD SustenAgro complementa essa definição por meio de ontologias, que
+ servem para representar o conhecimento de especialistas do domínio, e DSLs,
+ que servem para customizar o seu comportamento.
+ A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Arquitetura-do-SustenAgro."
 
-\begin_layout Standard
-A seguinte figura apresenta a arquitetura do SAD SustenAgro:
+\end_inset
+
+apresenta a arquitetura do SAD SustenAgro.
 \end_layout
 
 \begin_layout Standard
@@ -775,7 +747,15 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Arquitetura do SustenAgro
+Arquitetura do SAD SustenAgro.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Arquitetura-do-SustenAgro."
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -797,13 +777,13 @@ Os especialistas que usam a
 \lang english
 DSL
 \lang brazilian
- para definir as perguntas aos usuários finais, definir o método de avaliação
- e gerar o relatório de cada análise.
+ para definir o conhecimento, perguntas aos usuários finais, método de avaliação
+ e formato do relatório de cada análise.
 \end_layout
 
 \begin_layout Itemize
-Os usuários finais: que usam o sistema para avaliar a sustentabilidade nas
- unidades produtivas
+Os usuários finais que usam o sistema para avaliar a sustentabilidade de
+ unidades produtivas.
 \end_layout
 
 \begin_layout Standard
@@ -811,13 +791,13 @@ Os componentes do SAD SustenAgro são:
 \end_layout
 
 \begin_layout Itemize
-Ontologia do domínio: ontologia que representa os conceitos do domínio avaliação
- da sustentabilidade do sistema produtivo de cana-de-açúcar, ela foi desenvolvid
-a junto com os especialistas da Embrapa Meio Ambiente.
- Esta ontologia é a base para o SAD SustenAgro porque permite estabelecer
- os conceitos fundamentais que são utilizados pelo sistema, entre eles:
- indicadores, componentes de indicadores, índices, dimensões da sustentabilidade
-, recomendações e o método de avaliação.
+Ontologia do domínio: ontologia que representa os conceitos do domínio de
+ avaliação de sustentabilidade dos sistemas produtivos de cana-de-açúcar.
+ Ela foi desenvolvida em conjunto com os especialistas da Embrapa Meio Ambiente.
+ Essa ontologia é a base para o SAD SustenAgro porque permite estabelecer
+ os conceitos fundamentais que são utilizados pelo sistema.
+ Entre eles: indicadores, componentes de indicadores, índices, dimensões
+ da sustentabilidade e recomendações.
 \end_layout
 
 \begin_layout Itemize
@@ -826,9 +806,10 @@ a junto com os especialistas da Embrapa Meio Ambiente.
 DSL Code
 \lang brazilian
 : representa as instruções definidas pelos especialistas que complementam
- os conceitos das ontologias permitindo definir o SAD SustenAgro.
- A definição é feita em termos dos componentes, como são: os conceitos a
- avaliar, os métodos matemáticos e a apresentação do resultado da avaliação.
+ os conceitos das ontologias definindo o comportamento do SAD SustenAgro.
+ Essa definição é feita em termos das características a serem avaliadas,
+ dos modelos para cálculo dos índices de sustentabilidade e da apresentação
+ do resultado final da avaliação.
  
 \end_layout
 
@@ -837,9 +818,9 @@ DSL Code
 \lang english
 DSL Editor
 \lang brazilian
-: Uma ferramenta web que permite editar as instruções da DSL do SAD SustenAgro,
- permitindo acrescentar novo conhecimento ou atualizar o existente, realizando
- as mudanças no SAD em tempo real.
+: Uma ferramenta web que permite editar as instruções da DSL do SAD SustenAgro.
+ Ela permite acrescentar novos conhecimentos ou atualizar os já existentes,
+ realizando as mudanças no SAD em tempo real.
 \end_layout
 
 \begin_layout Itemize
@@ -851,11 +832,11 @@ SustenAgro Controller
  gerenciar os conceitos da ontologia, para implementar o método de avaliação
  e gerar as 
 \lang english
-web UIs
+Web UIs
 \lang brazilian
- e os 
+ (usando 
 \lang english
-web components
+Web Components)
 \lang brazilian
  que permitem a visualização do SAD SustenAgro.
 \end_layout
@@ -865,15 +846,13 @@ web components
 \lang english
 SustenAgro Web 
 \lang brazilian
-UI: representa as interfaces gráficas do SAD que estão compostas de 
+UI: mostra as interfaces gráficas do SAD.
+ Elas estão compostas de 
 \lang english
 widgets
 \lang brazilian
- (elementos da 
-\lang english
-UI
-\lang brazilian
-), e permitem a visualização e interação do usuário final com o SAD SustenAgro.
+ (elementos gráficos na forma de Web Components) e permitem a visualização
+ e interação do usuário final com o SAD SustenAgro.
 \end_layout
 
 \begin_layout Subsection
@@ -881,29 +860,30 @@ Ontologia SustenAgro
 \end_layout
 
 \begin_layout Standard
-Segundo a definição de ontologia de 
+Seguindo a definição de ontologia de 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "allemang2011semantic"
 
 \end_inset
 
-, foi modelado a ontologia SustenAgro que representa o conhecimento dos
- especialistas do domínio envolvido nas avaliações de sustentabilidade no
+, ontologia SustenAgro foi modelada para representar o conhecimento dos
+ especialistas do domínio envolvidos em avaliações de sustentabilidade no
  sistema produtivo de cana-de-açúcar do centro-sul do Brasil.
 \end_layout
 
 \begin_layout Standard
-A figura 
+A Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:ontology-conceptual-map"
 
 \end_inset
 
- representa um mapa conceitual com os principais conceitos modelados e como
- estão relacionados entre eles, com etiquetas em cada relação dos conceitos
- que permitem identificar a relação entre os dois conceitos.
+ representa um mapa conceitual com os principais conceitos modelados e seus
+ relacionados.
+ Etiquetas em cada linha relacionando dois conceitos permitem identificar
+ a relação entre eles.
 \end_layout
 
 \begin_layout Standard
@@ -917,7 +897,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename figures/SustenAgro conceptual map.png
-	lyxscale 30
+	lyxscale 50
 	width 60col%
 
 \end_inset
@@ -958,8 +938,8 @@ Os principais conceitos modelados na ontologia foram:
 \lang english
 Production Unit:
 \lang brazilian
- Representa as organizações que podem ser avaliadas pelo sistema SustenAgro
- para obter avaliações da sustentabilidade, atualmente podem ser 
+ Representa as organizações que podem ser avaliadas pelo sistema SustenAgro.
+ Atualmente podem ser 
 \shape italic
 Fornecedores de cana-de-açúcar
 \shape default
@@ -975,10 +955,10 @@ Usinas processadoras de cana-de-açúcar.
 Microregion:
 \shape default
 \lang brazilian
- Representam os locais onde são localizadas as unidades produtivas, permitindo
- definir a microrregião das unidades produtivas, atualmente a ontologia
- tem 7 estados pertencentes ao centro-sul do Brasil e 243 microrregiões
- dentro dos estados registrados.
+ Representam as microrregiões onde são localizadas as unidades produtivas.
+ Atualmente a ontologia tem as microrregiões dos 7 estados pertencentes
+ ao centro-sul do Brasil.
+ No total 243 microrregiões.
 \end_layout
 
 \begin_layout Itemize
@@ -989,15 +969,15 @@ Indicator:
 \shape default
 \lang brazilian
  Representam as características das unidades produtivas que serão identificadas
- e quantificadas em cada processo de avaliação, eles tem um 
+ e quantificadas em cada processo de avaliação.
+ Eles têm uma propriedade 
 \shape italic
 \lang english
 Value
 \lang brazilian
  
 \shape default
-que quantifica a sustentabilidade do indicador, esta propriedade junto com
- outras conformam um formato que permite identificar e gerenciar tais elementos.
+que quantifica a sustentabilidade do indicador.
 \end_layout
 
 \begin_layout Itemize
@@ -1006,8 +986,10 @@ que quantifica a sustentabilidade do indicador, esta propriedade junto com
 Categorical
 \lang brazilian
 : Representa os possíveis 
+\shape italic
 \lang english
-Value
+Values
+\shape default
 \lang brazilian
  que um 
 \shape italic
@@ -1015,43 +997,10 @@ Value
 Indicator
 \shape default
 \lang brazilian
- pode ter, através das suas subclasses como são as classes 
-\lang english
-Real
-\lang brazilian
- e a classe 
-\lang english
-Categorical.
-
-\lang brazilian
- Esta classe permite classificar cada umas das categorias de valores, que
- são elementos discretos modelados como indivíduos da classe, permitindo
- assim, restringir as opções de instanciação de cada indicador.
-\end_layout
-
-\begin_layout Standard
-O principal componente da ontologia foram os indicadores da sustentabilidade,
- representados na classe Indicator, a Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Modelagem-de-Indicador"
-
-\end_inset
-
-, é apresentada a hierarquia de classes dos indicadores, que subdivide a
- classe Indicator em 
-\lang english
-Efficiency Indicator
-\lang brazilian
- e 
-\lang english
-Sustainability Indicator
-\lang brazilian
-, também é apresentado o indicador 
-\lang english
-Adequacy of Boilers
-\lang brazilian
- com as propriedades dele a maneira de exemplo.
+ pode ter.
+ Através das suas subclasses é possível definir categorias, valores discretos
+ modelados como instâncias de alguma classe de categorias, permitindo assim
+ restringir opções para cada indicador.
 \end_layout
 
 \begin_layout Standard
@@ -1065,7 +1014,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/john/Desktop/sustenagro-ontologies-and-dsl/figures/Indicador.png
+	filename figures/Indicador.png
 	width 50col%
 
 \end_inset
@@ -1077,7 +1026,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Modelagem de indicador 
+Modelagem de indicadores.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Modelagem-de-Indicador"
@@ -1098,21 +1048,52 @@ name "fig:Modelagem-de-Indicador"
 \end_layout
 
 \begin_layout Standard
-A partir desses conceitos foi possível suportar o método SustenAgro de avaliação
- da sustentabilidade, os conceitos representam a estrutura do conhecimento
- dos especialistas e a funcionalidade do SAD foi representada por meio da
- DSL SustenAgro que representa permite definir o conhecimento mais próximo
- à linguagem dos especialistas do domínio em sustentabilidade.
-\end_layout
+Os principais componentes da ontologia são os indicadores de sustentabilidade.
+ Eles são representados pela classe Indicator.
+ A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Modelagem-de-Indicador"
 
-\begin_layout Subsection
-SustenAgro DSL
+\end_inset
+
+ mostra a hierarquia de classes dos indicadores.
+ Ela se divide em duas classes:
+\shape italic
+ 
+\lang english
+Efficiency Indicator
+\shape default
+\lang brazilian
+ e 
+\shape italic
+\lang english
+Sustainability Indicator
+\shape default
+\lang brazilian
+.
+ A figura também mostra o indicador 
+\shape italic
+\lang english
+Adequacy of Boilers
+\shape default
+\lang brazilian
+ e suas propriedades, como exemplo.
 \end_layout
 
 \begin_layout Standard
-O SustenAgro DSL permite fornecer uma linguagem adequada ao nível de conheciment
-o de computação dos especialistas, que contenha termos familiares ao domínio
- deles.
+A partir desses conceitos foi possível dar suporte ao método SustenAgro.
+ Eles representam a estrutura de conhecimento dos especialistas.
+ As funcionalidades do SAD foram representada por meio da DSL SustenAgro.
+\end_layout
+
+\begin_layout Subsection
+DSL SustenAgro
+\end_layout
+
+\begin_layout Standard
+A DSL SustenAgro fornecer uma linguagem adequada ao nível de conhecimento
+ de computação dos especialistas e contem termos familiares ao domínio deles.
  Segundo 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1126,7 +1107,7 @@ key "Mernik:2005:DDL:1118890.1118892"
 \end_layout
 
 \begin_layout Standard
-O tipo de DSL escolhida para o SAD SustenAgro foi uma 
+O tipo de DSL, escolhida para o SAD SustenAgro foi uma 
 \lang english
 Internal DSL 
 \begin_inset CommandInset citation
@@ -1135,13 +1116,13 @@ key "fowler2010domain"
 
 \end_inset
 
-
+,
 \lang brazilian
- que permite basear-se em uma linguagem existente que forneça as funcionalidades
+ que é baseada em uma linguagem existente que forneça as funcionalidades
  básicas à DSL.
- A linguagem selecionada para definir a DSL foi Groovy, a quais integram-se
- complementante parecendo que código fosse um só, permitindo usar todas
- características da linguagem Groovy na DSL 
+ A linguagem selecionada para definir a DSL foi Groovy.
+ A DSL integra-se complementante à Groovy e permite usar todas características
+ da mesma na DSL 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "dearle2015groovy"
@@ -1160,8 +1141,8 @@ As principais instruções da DSL são:
 \lang english
 Evaluation Object:
 \lang brazilian
- Representa as entidades com as propriedades que especificam o que está
- sendo avaliado.
+ Representa as entidades a serem avaliadas.
+ É possível definir propriedades que especifiquem o que está sendo avaliado.
 \end_layout
 
 \begin_layout Itemize
@@ -1189,38 +1170,28 @@ Report:
 \end_layout
 
 \begin_layout Standard
-A instrução mais importante é 
+A instrução mais importante da DSL é 
+\shape italic
 \lang english
 Report
+\shape default
 \lang brazilian
-, devido a que permite definir o método de avaliação da sustentabilidade
- da cultura de cana-de-açúcar em formato computável por parte dos especialistas
- em sustentabilidade.
- O código 
+ já que ela permite definir o modelo de avaliação de sustentabilidade usado.
+ A Listagem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lis:Definição-da-logica"
 
 \end_inset
 
- representa as fórmulas de avaliação (linhas 2-9) gerando índices 
+ mostra as fórmulas de avaliação (linhas 2-9), que geram os índices 
 \shape italic
-\lang english
-economic
+sustainability
 \shape default
-\lang brazilian
  e 
 \shape italic
 \lang english
-efficiency
-\shape default
-\lang brazilian
- que permite são apresentado no relatório por meio dos 
-\lang english
-Web Components,
-\lang brazilian
- no código estes dois índices são apresentados através da instrução sustainabili
-tyMatrix que apresenta os resultados na matriz de sustentabilidade.
+efficiency.
 \end_layout
 
 \begin_layout Standard
@@ -1306,7 +1277,7 @@ echEfficiencyIndustrial)
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Definição da lógica de avaliação e relatório.
+Definição na SAD da lógica de avaliação e relatório.
 \begin_inset CommandInset label
 LatexCommand label
 name "lis:Definição-da-logica"
@@ -1327,29 +1298,38 @@ name "lis:Definição-da-logica"
 \end_layout
 
 \begin_layout Standard
-A instrução 
+A instrução
 \lang english
-Report
+ 
+\shape italic
+report
+\shape default
 \lang brazilian
- também permite definir os relatórios do SAD, que é composto de 
+ também permite definir os relatórios do SAD.
+ Widgets, implementadas por 
 \lang english
-Web Components,
+Web Components
 \lang brazilian
- permitindo definir a apresentação de cada um dos índices gerados da avaliação.
- A Figura 
+, mostram gráficos para apresentação dos índices gerados na avaliação.
+ Na listagem, os dois índices calculados são apresentados através da instrução
+ 
+\shape italic
+sustainabilityMatrix
+\shape default
+, que apresenta os índices numa matriz de sustentabilidade (um Web Component)
+\end_layout
+
+\begin_layout Standard
+A Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Matriz-de-sustentabilidade-widget"
 
 \end_inset
 
- apresenta o relatório resultante da configuração da DSL, quando o sistema
- gerá uma avaliação da sustentabilidade, o qual usa um 
-\lang english
-Web Component
-\lang brazilian
- especifico intitulado Matriz de Sustentabilidade para apresentar os resultados
- da avaliação.
+ apresenta o relatório resultante ao se rodar esse código da DSL.
+ A figura mostra os índices de sustentabilidade e eficiência e uma recomendação
+ na Matriz de Sustentabilidade como resultados de uma avaliação.
 \end_layout
 
 \begin_layout Standard
@@ -1363,7 +1343,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename /home/john/Desktop/sustenagro-ontologies-and-dsl/figures/SustenAgro-matrix.png
+	filename figures/SustenAgro-matrix.png
 	width 80col%
 
 \end_inset
@@ -1396,8 +1376,10 @@ name "fig:Matriz-de-sustentabilidade-widget"
 \end_layout
 
 \begin_layout Standard
-Uma característica da DSL é que ela permite a edição em tempo de execução
- do SAD, permitindo atualizar as instruções e ver as mudanças imediatamente.
+Uma característica da DSL é que ela permite a edição em tempo real do comportame
+nto do SAD.
+ Isso permite que especialistas mudem as instruções e vejam suas mudanças
+ imediatamente.
 \end_layout
 
 \begin_layout Subsection
@@ -1411,7 +1393,7 @@ O método de definição de conhecimento dos especialistas utiliza os conceitos
 
 \begin_layout Enumerate
 Definição das classes e indivíduos do domínio na Ontologia SustenAgro, represent
-ando os conceitos necessários para realizar processo de avaliação.
+ando os conceitos necessários para realizar o processo de avaliação.
 \end_layout
 
 \begin_layout Enumerate
@@ -1425,13 +1407,13 @@ Definição do relatório através de
 \lang english
 Web Components
 \lang brazilian
- que utiliza os índices para instanciar as web UI.
+ que utilizam os índices para instanciar as Web UI.
 \end_layout
 
 \begin_layout Standard
-Estas etapas permitem definir ou atualizar as características do SAD SustenAgro,
+Essas etapas permitem definir ou atualizar as características do SAD SustenAgro,
  permitindo que os especialistas do domínio configurem o SAD de maneira
- customizável segundo o critério deles.
+ customizável segundo o critério deles sem a ajuda de programadores.
  
 \end_layout
 
@@ -1447,38 +1429,91 @@ name "sec:Avaliação"
 \end_layout
 
 \begin_layout Standard
-Com a finalidade de avaliar a implementação do método SustenAgro, foram
- realizados testes de vários tipos de avaliações para comparar com resultados
- de outras fontes, e assim validar a correta implementação.
- Os detalhes da avaliação foram.
+Com a finalidade de avaliar a implementação do método SustenAgro, avaliações
+ foram feitas por usuários especialistas e usuários finais da Embrapa para
+ validar a implementação.
+ Os avaliações incluiram:
+\end_layout
+
+\begin_layout Subsection
+Avaliação das Web UI.
+\end_layout
+
+\begin_layout Standard
+Na finalização do processo de design das Web UI, explicado na Seção 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Web-UI"
+
+\end_inset
+
+, foi realizada uma avaliação da usabilidade das mesmas no SAD SustenAgro.
+ Os detalhes dessa avaliação foram:
 \end_layout
 
 \begin_layout Description
-Data 6 de junho do 2016
+Data Junho de 2015.
+ 
+\series bold
+Participantes
+\series default
+ Usuários da ferramenta: especialista em sustentabilidade e especialista
+ em economia agrícola
 \end_layout
 
 \begin_layout Description
-Participantes Especialista em sustentabilidade e especialista em economia
- agrícola
+Local Instituto de Ciências Matemáticas e de Computação (ICMC-USP)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ICMC"
+description " Instituto de Ciências Matemáticas e de Computação"
+
+\end_inset
+
+ 
+\series bold
+Técnica
+\series default
+ Avaliação de usabilidade
+\end_layout
+
+\begin_layout Standard
+Nessa avaliação foi apresentado, aos usuários especialistas em sustentabilidade,
+ o processo de design da UI e o protótipo da interface gráfica de usuário
+ do SAD SustenAgro sem dados reais.
+ Nessas interfaces, eles interagiram com as telas, através de um navegador
+ web, fazendo uso das funcionalidades do SAD que simulava os dados durante
+ o processo.
+ A avaliação foi positiva, cumprindo requisitos de usabilidade.
+ Esta avaliação gerou várias recomendações para melhorar a interface gráfica
+ de usuário, que foram implementadas.
+ 
 \end_layout
 
 \begin_layout Description
-Local Agência Paulista de Tecnologia dos Agronegócios (APTA)
+Data 6 de junho do 2016 
+\series bold
+Participantes
+\series default
+ Especialista em sustentabilidade e especialista em economia agrícola
 \end_layout
 
 \begin_layout Description
-Técnica Testes numéricos dos resultados do software
+Local Agência Paulista de Tecnologia dos Agronegócios (APTA) 
+\series bold
+Técnica
+\series default
+ Testes numéricos dos resultados do software
 \end_layout
 
 \begin_layout Standard
 A avaliação dos resultados numéricos do método de avaliação, foi realizada
  a partir de cenários com casos extremos dos indicadores, processo denominado
- teste de mínimos e máximos, sendo realizada uma comparativa dos resultados
- obtidos pelos especialistas de outras fontes com os resultados de avaliação
- do SAD SustenAgro.
- Estas avaliações geraram resultados iguais em forma de relatório que permitem
- validar a correta definição do método SustenAgro e implementação do SAD
- SustenAgro.
+ teste de mínimos e máximos.
+ Foi realizada uma comparação dos resultados do SAD SustenAgro com resultados
+ obtidos manualmente por especialistas.
+ Ambos os resultados foram iguais o que permitiu validar a correta implementação
+ do método SustenAgro pelo SAD.
 \end_layout
 
 \begin_layout Section
@@ -1496,52 +1531,36 @@ name "sec:Resultados"
 Os principal resultados da presente pesquisa são:
 \end_layout
 
-\begin_layout Subsection*
-Método de definição de conhecimento para o SAD SustenAgro
+\begin_layout Itemize
+Método de definição de conhecimento para o SAD SustenAgro: Um método para
+ capturar o conhecimento dos especialistas de sustentabilidade no SAD SustenAgro
+, permitindo que os próprios especialistas definam e atualizem o SAD.
 \end_layout
 
-\begin_layout Standard
-Um método para definir o conhecimento dos especialistas de sustentabilidade
- no SAD SustenAgro, permitindo que os especialistas definam ou atualizem
- o SAD por eles mesmos.
-\end_layout
-
-\begin_layout Subsection*
-O SAD SustenAgro
-\end_layout
-
-\begin_layout Standard
-SAD para avaliação da sustentabilidade em cana-de-açúcar, na região centro-sul
- do Brasil.
+\begin_layout Itemize
+O SAD SustenAgro: SAD para avaliação da sustentabilidade em sistemas produtivos
+ de cana-de-açúcar, na região centro-sul do Brasil.
  O SAD SustenAgro foi baseado na Ontologia SustenAgro e DSL SustenAgro que
- permitem definir o conhecimento dos especialistas do domínio a nível estrutural
- e funcional respetivamente.
+ permitem que especialistas de domínio possam modificar diretamente e em
+ tempo real a estrutura e funcionalidades do SAD.
  
 \end_layout
 
-\begin_layout Section
-Discussão
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Discussão"
-
-\end_inset
-
-
+\begin_layout Itemize
+Avaliação do SAD SustenAgro: O SAD foi analisado por especialistas de domínio
+ que testaram a sua interface e acurácia.
+ A sua interface foi considerada satisfatória e os resultados calculados
+ pelo SAD foram iguais aos calculados por especialistas.
 \end_layout
 
 \begin_layout Standard
-A partir da identificação do problema da inexistência de um meio de representaçã
-o de conhecimento para definir SADs de avaliação por parte dos especialistas
- do domínio, foi desenvolvido e avaliada positivamente a solução apresentada
+A partir da identificação do problema da inexistência de um meio padrão
+ para representação de conhecimento em SADs diretamente por especialistas
+ de domínio, foi desenvolvido e avaliada positivamente a solução apresentada
  neste trabalho.
-\end_layout
-
-\begin_layout Standard
-Esta solução integra uma ontologias e uma DSL que permitiram avaliar o uso
- dela por parte dos especialistas, os quais conseguiram definir o SAD SustenAgro.
- Porém, poderiam existir outras soluções que facilitem ainda mais o processo
- de definição do conhecimento dos especialistas no SAD SustenAgro.
+ Ela integra uma ontologia e uma DSL para a geração de um SAD.
+ Especialistas conseguiram modificar as características do SAD SustenAgro,
+ em tempo real, sem a ajuda de programadores.
 \end_layout
 
 \begin_layout Section
@@ -1557,38 +1576,36 @@ name "sec:Conclusões"
 
 \begin_layout Standard
 O desenvolvimento do SAD SustenAgro, permitiu avaliar de maneira positiva
- o suporte que as ontologias fornecem na representação de conhecimento do
- domínio e testar novas possibilidades na definição e geração de SAD baseados
- em conhecimento.
+ o suporte que as ontologias fornecem na representação de conhecimento de
+ domínio.
+ Também foram testadas novas possibilidades de definição e geração de SADs,
+ baseados em conhecimento, com participação direta de especialistas.
  
 \end_layout
 
 \begin_layout Standard
-A principal contribuição da ontologia do domínio é ser uma representação
+A principal contribuição da ontologia de domínio é ser uma representação
  semântica do conhecimento de domínio tanto para os usuários como para o
- sistema computacional, tornando-se um meio de comunicação entre os especialista
-s de domínio e os programadores.
-\end_layout
-
-\begin_layout Standard
-Desta forma forneceu um método que soluciona o problema da inexistência
+ sistema computacional do SAD, tornando-se um meio de comunicação entre
+ os especialistas de domínio e o sistema.
+ A ontologia em OWL forneceu um método para soluciona o problema da inexistência
  de uma representação de conhecimento para definir o SAD SustenAgro, que
- tenha um formato computável, entendível e acessível aos especialistas do
- domínio e desenvolvedores de software.
+ tivesse um formato computável, entendível e acessível aos especialistas
+ do domínio e desenvolvedores de software.
 \end_layout
 
 \begin_layout Standard
-Porém o método ainda precisa de mais validações em outros domínios e experimenta
-r outros tipos de tecnologias baseadas em conhecimento para definir um método
- geral de definição de SAD pelos especialistas do domínio.
+Porém, este método ainda precisa de mais validações em outros domínios de
+ SADs e de expandir as ferramentas que especialistas de domínio podem usar
+ para definir ontologias.
 \end_layout
 
 \begin_layout Standard
-O SAD SustenAgro foi avaliado como uma contribuição inédita, porque permite
- fornece funcionalidades que não estão em outras ferramentas.
- Também o SAD SustenAgro pode ser aplicado a outros sistemas agrícolas,
- o que poderia suportar melhoras na produção de alimentos e produtos neste
- setor 
+O SAD SustenAgro fornece importantes funcionalidades que não estão presentes
+ em outras ferramentas (contribuições inéditas).
+ Ele também pode ser aplicado a outros sistemas agrícolas, o que poderia
+ suportar melhorias na produção de alimentos e outros produtos do setor
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Matthews2008149"
@@ -1600,31 +1617,10 @@ key "Matthews2008149"
 
 \begin_layout Standard
 O desenvolvimento do SAD SustenAgro, em cooperação com a Embrapa Meio Ambiente,
- poderia gerar impacto positivo na produção de cana-de-açúcar do centro-sul
- do Brasil, já que ele fornece a funcionalidade de avaliar a sustentabilidade
- na cana-de-açúcar.
- Este impacto positivo só seria possível se o SAD é usado da maneira correta
+ pode gerar impactos positivos na produção de cana-de-açúcar no centro-sul
+ do Brasil, ao oferecer uma maneira simples e padronizada para avaliar sustentab
+ilidade.
  
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Lee2008349"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Particularmente, o setor produtivo produtivo da cana-de-açúcar é extremamente
- importante para a economia do estado de São Paulo e do Brasil, devido ao
- fato de ser uma das principais culturas produzidas no país 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Storquato2015"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section*
@@ -1632,13 +1628,7 @@ Agradecimentos
 \end_layout
 
 \begin_layout Standard
-Um especial agradecimento ao professor Dr.
- Dilvan A.
- Moreira pela orientação durante o desenvolvimento da presente pesquisa,
- à pesquisadora Dra.
- Katia Regina Evaristo quem desde a Embrapa Meio Ambiente ajudou-me em todos
- os aspectos, à Universidade de São Paulo por acolher-me como um integrante
- mais e à CAPES pelo financiamento deste trabalho.
+Gostaria de agradecer à CAPES pelo financiamento deste trabalho.
 \end_layout
 
 \begin_layout Standard
