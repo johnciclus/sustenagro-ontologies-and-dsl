@@ -217,7 +217,41 @@ fntext[fn2]{PhD.
 \end_layout
 
 \begin_layout Abstract
-Resumo
+O processo de avaliação da sustentabilidade é caracterizado pela complexidade,
+ interdisciplinariedade e continua mudança.
+ Pelo qual especialistas em sustentabilidade da Embrapa Meio Ambiente definiram
+ o método SustenAgro de avaliação da sustentabilidade em cana-de-açúcar.
+ A implementação deste método no Sistema de Apoio à Decisão (SAD 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SAD"
+description "Sistema de Apoio à Decisão"
+
+\end_inset
+
+) intitulado SustenAgro permitiu identificar o problema da inexistência
+ de um meio de representação de conhecimento para definir SADs de avaliação.
+ Em este artigo, apresentamos um método de definição do conhecimento proposto
+ através da implementação do SAD SustenAgro que foi baseado em uma ontologia
+ da web Semântica e uma 
+\lang english
+Domain Specific Language
+\lang brazilian
+ (
+\lang english
+DSL
+\lang brazilian
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DSL"
+description "Domain Specific Language"
+
+\end_inset
+
+).
+ Também será apresentada a avaliação dos especialistas ao usar o método
+ de definição do SAD por meio da implementação integrada no SAD SustenAgro.
 \end_layout
 
 \begin_layout Keywords
@@ -235,30 +269,37 @@ Introdução
 \end_layout
 
 \begin_layout Standard
-O conhecimento dos especialistas utilizado durante o processo de avaliação
- da sustentabilidade em agricultura é caracterizado pela complexidade, interdisc
-iplinariedade e continua mudança.
- Pelo qual especialistas em sustentabilidade da Embrapa Meio Ambiente definiram
- o método SustenAgro de avaliação da sustentabilidade em cana-de-açúcar
- que permitisse avaliar a sustentabilidade de maneira integrada.
-\end_layout
-
-\begin_layout Standard
-Para disponibilizar o uso do método SustenAgro por meio da internet, foi
- necessário o desenvolvimento de um Sistemas de Apoio à Decisão (SAD 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "SAD"
-description "Sistema de Apoio à Decisão"
+Os especialistas da Embrapa Meio Ambiente desenvolveram o método SustenAgro
+ que permite avaliar a sustentabilidade no sistema produtivo de cana-de-açúcar
+ no centro-sul do Brasil
+\begin_inset CommandInset citation
+LatexCommand citep
+key "oliveira:2013"
 
 \end_inset
 
-) intitulado SAD SustenAgro, que permitisse avaliar a sustentabilidade.
- Esta pesquisa identificou que para modelar a complexidade do conhecimento
- de maneira computável é necessário o uso de ontologias.
- Porém, devido à continua mudança do conhecimento foram testados métodos
- que permitissem facilitar a definição de conhecimento em sustentabilidade
- por parte dos especialistas.
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Com a finalidade de disponibilizar uma implementação do método para que
+ os usuários possam usá-lo através da web, foi requerido o desenvolvimento
+ do SAD SustenAgro.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No processo de desenvolvimento do SAD, foi identificado que as ontologias
+ da web semântica permitem modelar o conhecimento, inclusive quando ele
+ é complexo como acontece na sustentabilidade.
+ Porém, devido à continua mudança do conhecimento foram procurados outros
+ métodos que facilitem a definição de conhecimento por parte dos especialistas.
 \end_layout
 
 \begin_layout Standard
@@ -271,45 +312,19 @@ A partir desta experiencia foi identificado o problema da inexistência de
 
 \begin_layout Standard
 No presente trabalho é apresentado um método de definição de conhecimento
- que permite aos especialistas do domínio definir as funcionalidades do
- SAD SustenAgro, apresentando os componentes do SAD SustenAgro que suportam
- dita funcionalidade, entre eles as ontologias e uma 
+ no SAD SustenAgro que permite aos especialistas do domínio definir as funcional
+idades desse SAD.
+ O método de definição está baseado em ontologias e uma 
 \lang english
-Domain Specific Language
+DSL
 \lang brazilian
  desenvolvida para suportar os conceitos de avaliação da sustentabilidade
  em agricultura.
 \end_layout
 
-\begin_layout Section
-Objetivo
-\end_layout
-
-\begin_layout Standard
-O objetivo deste trabalho é suportar a definição de conhecimento do domínio
- no SAD SustenAgro por parte dos especialistas em sustentabilidade.
- Para isso foi definido um método baseado em uma ontologias da web semântica
- e em uma DSL que em conjunto permitem representar o conhecimento dos especialis
-tas em sustentabilidade de maneira computável.
-\end_layout
-
-\begin_layout Standard
-O SAD SustenAgro utiliza o conhecimento dos especialistas na organização
- e processamento dos dados e na apresentação de resultados das avaliações
- de sustentabilidade das unidades produtivas com a finalidade de avaliar
- a sustentabilidade e fornecer recomendações que permitam aos usuários tomar
- decisões em vários aspectos das unidades produtivas avaliadas.
-\end_layout
-
-\begin_layout Standard
-Os especialistas do domínio são os autores do processo de avaliação, por
- esta razão foram procuradas maneiras que permitam que eles mesmos representem
- o conhecimento no SAD SustenAgro, permitindo uma definição feita pelos
- autores do método de avaliação da sustentabilidade.
-\end_layout
-
 \begin_layout Standard
 Este artigo esta organizado da seguinte forma.
+ Seção 2 apresenta o objetivo desenvolvido na pesquisa.
  Seção 3 apresenta os trabalhos relacionados.
  Seção 4 descreve a metodologia composta das ontologias e das DSLs.
  Seção 5 apresenta a avaliação do sistema.
@@ -319,7 +334,64 @@ Este artigo esta organizado da seguinte forma.
 \end_layout
 
 \begin_layout Section
+Objetivo
+\end_layout
+
+\begin_layout Standard
+O objetivo deste trabalho foi suportar e facilitar a definição de conhecimento
+ dos especialistas em sustentabilidade no SAD SustenAgro.
+ 
+\end_layout
+
+\begin_layout Standard
+Para cumprir este objetivo foi desenvolvido um método baseado em uma ontologia
+ da web semântica e em uma DSL, que em conjunto permitem representar o conhecime
+nto de avaliação de sustentabilidade em forma computável por parte dos especiali
+stas em sustentabilidade.
+\end_layout
+
+\begin_layout Section
 Trabalhos relacionados
+\end_layout
+
+\begin_layout Standard
+Os Sistemas de apoio à decisão, tem usado ontologias para suportar varias
+ fases do processo de decisão como: a organização dos dados, o processamento
+ deles e a representação da informação produzida 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Rospocher:2012:ODS:2887638.2887644"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citep
+key "roussey2010ontologies,Janssen2009573"
+
+\end_inset
+
+ afirmam o uso de ontologias em várias subáreas da agricultura e como elas
+ tem melhorado as capacidades dos sistemas de informação, principalmente
+ na modelagem e na interoperabilidade de sistemas.
+ Este trabalho confirma que o uso de ontologias traz varias vantagens para
+ abordar o problema identificado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Abt2009"
+
+\end_inset
+
+ apresenta uma proposta para modelar conceitualmente fazendas para desenvolver
+ sistemas de gerenciamento das fazendas abrangendo mais complexidade do
+ domínio, e assim melhorar o sistema produtivo principalmente em aspectos
+ de sustentabilidade.
 \end_layout
 
 \begin_layout Standard
@@ -329,20 +401,51 @@ key "Bonacin:2013:CIA:2536146.2536185"
 
 \end_inset
 
- apresentam uma versão de ontologia web sobre a Agricultura em Recursos
- Hídricos que tem o objetivo de fornecer um meio de recuperação e compartilhamen
-to do conhecimento dos especialistas 
+ apresentam uma ontologia sobre a Agricultura em Recursos Hídricos que tem
+ o objetivo de fornecer um meio de recuperação e compartilhamento do conheciment
+o dos especialistas.
+ Este trabalho tem o objetivo de fornecer um meio de representação de conhecimen
+to em agricultura, mas não é abordado como facilitar o uso desse meio para
+ especialistas sem conhecimento de modelagem.
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset citation
-LatexCommand citep
-key "roussey2010ontologies"
+LatexCommand citet
+key "soulignac2012knowledge"
 
 \end_inset
 
- apresenta um afirma que o uso ontologias têm sido realizado em várias aplicaçõe
-s relacionadas a agricultura
+ apresenta um sistema de gestão de conhecimento que fornece serviços computacion
+ais para selecionar e formalizar o conhecimento em agricultura orgânica.
+ Este trabalho abrange técnicas para formalizar o conhecimento agrícola
+ com a visão de fornecer informações que ajudem a tomar decisões a adotar
+ praticas sustentáveis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kumazawa2009toward"
+
+\end_inset
+
+ apresenta que na ciência da sustentabilidade é necessário criar meios que
+ permitam definir conhecimento estruturado, e demostra que as ontologias
+ fornecem o suporte para isso.
+ Este trabalho confirma que as ontologias são o meio de representação de
+ conhecimento que é requerido em SustenAgro, devido a que a proposta é focada
+ em sustentabilidade.
+ 
+\end_layout
+
+\begin_layout Standard
+Durante a pesquisa foram procurados trabalhos sobre 
+\lang english
+Domain-Specific Languages
+\lang brazilian
+ em agricultura e não foram identificados trabalhos relevantes para nosso
+ objeto de pesquisa.
 \end_layout
 
 \begin_layout Section
@@ -350,17 +453,10 @@ SAD SustenAgro
 \end_layout
 
 \begin_layout Standard
-Os Sistemas de Apoio à Decisão (SAD 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "SAD"
-description "Sistema de Apoio à Decisão"
-
-\end_inset
-
-) são sistemas software que organizam e processam dados de um domínio através
- de métodos e modelos matemáticos que suportam a análise, comparação e escolha
- de alternativas no processo de decisão 
+Sistemas de Apoio à Decisão (SAD) são sistemas de informação que organizam
+ e processam dados de um domínio através de métodos e modelos matemáticos
+ que suportam a análise, comparação e escolha de alternativas no processo
+ de decisão 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Tweedale2016"
@@ -368,47 +464,19 @@ key "Tweedale2016"
 \end_inset
 
 .
- Os SADs dependem do conhecimento dos especialistas, pois eles definem como
- organizar os dados e processá-los, este conhecimento fica implícito nos
- componentes desse sistema software 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Evans:2003:DDT:861502"
-
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Standard
-O Sistemas de Apoio à Decisão (SAD 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "SAD"
-description "Sistema de Apoio à Decisão"
-
-\end_inset
-
-) SustenAgro integra o conhecimento dos especialistas do domínio na implementaçã
-o do método SustenAgro que define a avaliação da sustentabilidade do sistema
- produtivo de cana-de-açúcar no centro-sul do Brasil 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "oliveira:2013"
-
-\end_inset
-
-.
- Este método processa as características da unidade produtiva (usina ou
- fazenda produtora de cana-de-açúcar), para gerar índices e recomendações
- que permitam avaliar a sustentabilidade e suportar a tomada decisões.
+O SAD SustenAgro suporta a avaliação da sustentabilidade no sistema produtivo
+ de cana-de-açúcar e fornece recomendações para que os usuários tomem decisões
+ em vários aspectos das unidades produtivas (usinas e fazendas produtoras).
 \end_layout
 
 \begin_layout Standard
-Dada a complexidade envolvida no processo de avaliação da sustentabilidade
- em sistemas de produção agrícola, os pesquisadores da Embrapa Meio Ambiente
- trabalharam na definição de métodos que permitissem avaliar a sustentabilidade
- de maneira integral 
+As metodologias de avaliação da sustentabilidade envolvem varias áreas de
+ conhecimento e processos específicos que requerem ajuda computacional para
+ garantir a correta aplicação delas 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Singh2012281"
@@ -416,23 +484,8 @@ key "Singh2012281"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-O método SustenAgro foi o resultado desse esforço por parte dos especialistas
- em sustentabilidade e agricultura da Embrapa Meio Ambiente, ele permite
- avaliar o sistema produtivo de cana-de-açúcar no centro-sul do Brasil.
- Os indicadores de sustentabilidade são o principal componente do Método
- SustenAgro, permitindo caracterizar as unidades produtivas 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "oliveira:2013"
-
-\end_inset
-
-.
- Os aspectos mais relevantes das unidades produtivas são representados nos
- indicadores, que são uma pratica do setor agrícola 
+ A definição de indicadores é uma pratica das metodologias de avaliação
+ do setor agrícola 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "AlkanOlsson:2009"
@@ -440,7 +493,17 @@ key "AlkanOlsson:2009"
 \end_inset
 
 .
- 
+ O método SustenAgro utiliza indicadores de sustentabilidade como componente
+ principal, permitindo caracterizar os aspectos mais relevantes das unidades
+ produtivas 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "oliveira:2013"
+
+\end_inset
+
+, eles são processados para gerar índices e recomendações que permitam avaliar
+ a sustentabilidade e suportar a tomada decisões.
 \end_layout
 
 \begin_layout Standard
@@ -452,11 +515,10 @@ key "Evans:2003:DDT:861502"
 
  explica que existe uma necessidade de modelar o conhecimento chave de um
  domínio em um modelo, para permitir a comunicação e colaboração entre especiali
-stas de domínio e os desenvolvedores, pelo qual o modelo de conhecimento
- dos especialistas foi o objeto de pesquisa.
- A procura de modelos para representar o conhecimento dos especialistas
- do domínio, permitiu identificar que as ontologias da web semântica satisfazem
- tais requisitos de modelagem 
+stas de domínio e os desenvolvedores.
+ Pelo qual o modelo de representação de conhecimento dos especialistas foi
+ o objeto de pesquisa, a procura de modelos permitiu identificar que as
+ ontologias da web semântica satisfazem tais requisitos de modelagem 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "bernerslee2001"
@@ -464,13 +526,6 @@ key "bernerslee2001"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Durante o desenvolvimento do SAD SustenAgro os programadores de software
- envolveram-se em um processo de comunicação e interpretação do conhecimento
- dos especialistas que dificultou o desenvolvimento de software.
- 
 \end_layout
 
 \begin_layout Standard
@@ -487,8 +542,8 @@ key "simon1991architecture"
 \end_layout
 
 \begin_layout Standard
-A continuação será apresentados os conceitos fundamentais usados na definição
- do SAD SustenAgro.
+A continuação será apresentada a métodologia de desenvolvimento do SAD SustenAgr
+o e da Ontologia.
 \end_layout
 
 \begin_layout Subsection*
@@ -847,14 +902,6 @@ Domain Specic Language
 \lang english
 DSL
 \lang brazilian
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "DSL"
-description "Domain Specific Language"
-
-\end_inset
-
 ) que permite definir o conhecimento em termos dos especialistas.
  
 \end_layout
@@ -2917,7 +2964,7 @@ Um especial agradecimento ao professor Dr.
  à pesquisadora Dra.
  Katia Regina Evaristo quem desde a Embrapa Meio Ambiente ajudou-me em todos
  os aspectos, à Universidade de São Paulo por acolher-me como um integrante
- mais e à CAPES pelo financiamento.
+ mais e à CAPES pelo financiamento deste trabalho.
 \end_layout
 
 \begin_layout Section*
