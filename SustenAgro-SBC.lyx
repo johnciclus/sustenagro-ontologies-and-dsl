@@ -723,7 +723,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename figures/SustenAgro Architecture Complete.png
-	width 60col%
+	width 85col%
 
 \end_inset
 
@@ -885,7 +885,7 @@ status open
 \begin_inset Graphics
 	filename figures/SustenAgro conceptual map.png
 	lyxscale 50
-	width 60col%
+	width 85col%
 
 \end_inset
 
@@ -991,50 +991,6 @@ Indicator
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename figures/Indicador.png
-	width 50col%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Modelagem de indicadores.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Modelagem-de-Indicador"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Os principais componentes da ontologia são os indicadores de sustentabilidade.
  Eles são representados pela classe Indicator.
  A Figura 
@@ -1066,6 +1022,50 @@ Adequacy of Boilers
 \shape default
 \lang brazilian
  e suas propriedades, como exemplo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename figures/Indicador.png
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modelagem de indicadores.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Modelagem-de-Indicador"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1331,7 +1331,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename figures/SustenAgro-matrix.png
-	width 80col%
+	width 100col%
 
 \end_inset
 
@@ -1579,16 +1579,14 @@ A principal contribuição da ontologia de domínio é ser uma representação
  de uma representação de conhecimento para definir o SAD SustenAgro, que
  tivesse um formato computável, entendível e acessível aos especialistas
  do domínio e desenvolvedores de software.
+ 
 \end_layout
 
 \begin_layout Standard
 Porém, este método ainda precisa de mais validações em outros domínios de
  SADs e de expandir as ferramentas que especialistas de domínio podem usar
  para definir ontologias.
-\end_layout
-
-\begin_layout Standard
-O SAD SustenAgro fornece importantes funcionalidades que não estão presentes
+ O SAD SustenAgro fornece importantes funcionalidades que não estão presentes
  em outras ferramentas (contribuições inéditas).
  Ele também pode ser aplicado a outros sistemas agrícolas, o que poderia
  suportar melhorias na produção de alimentos e outros produtos do setor
@@ -1615,7 +1613,20 @@ Agradecimentos
 \end_layout
 
 \begin_layout Standard
-Gostaria de agradecer à CAPES pelo financiamento deste trabalho.
+Este trabalho foi realizado com uma bolsa de estudo financiado pela Coordenação
+ de Aperfeiçoamento de Pessoal de Nível Superior (CAPES) no âmbito do Ministério
+ da educação do Brasil.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
