@@ -26,7 +26,7 @@ urlcolor=blue
 
 \title{SustenAgro Sistema de Apoio à Decisão baseado em Ontologias e definido por uma Linguagem de Domínio Especifico.}
 
-\author{John F. Garavito\inst{1}, Dilvan de A. Moreria\inst{1} e Katia R. Evaristo\inst{2}}
+\author{John F. Garavito S.\inst{1}, Dilvan de A. Moreria\inst{1} e Katia R. Evaristo\inst{2}}
 
 
 \address{INSTITUTO DE CIÊNCIAS MATEMÁTICAS E DE COMPUTAÇÃO\\
@@ -143,9 +143,17 @@ maketitle
 \begin_layout Abstract
 
 \lang english
-Sustainability assessment process
-\lang brazilian
- 
+Sustainability assessment process in agriculture is characterized by complexity,
+ interdisciplinary and continuous changes.
+ By which sustainability experts of Embrapa Environment defined the SustenAgro
+ Method of sustainability assessment in sugarcane.
+ The implementation of this method into Decision Support System (DSS) entitled
+ SustenAgro, identified the problem of the lack of a means of representation
+ of knowledge to define evaluation DSSs.
+ In this paper, we present a method of definition of expert's knowledge
+ implemented in the DSS SustenAgro, that was based on a Semantic Web Ontology
+ and a Domain-Specific language (DSL).
+ Finally will be presented the expert's evaluation of proposed method.
 \end_layout
 
 \begin_layout Abstract
@@ -192,7 +200,7 @@ description "Sistema de Apoio à Decisão"
 ) intitulado SustenAgro, permitiu identificar o problema da inexistência
  de um meio de representação de conhecimento para definir SADs de avaliação.
  Em este artigo, apresentamos um método de definição do conhecimento dos
- especialistas implementado no do SAD SustenAgro que foi baseado em uma
+ especialistas implementado no do SAD SustenAgro, que foi baseado em uma
  ontologia da web Semântica e uma 
 \lang english
 Domain Specific Language
@@ -210,8 +218,7 @@ description "Domain Specific Language"
 \end_inset
 
 ).
- Também será apresentada a avaliação dos especialistas ao usar o método
- para definir o SAD SustenAgro.
+ Finalmente será apresentada a avaliação dos especialistas do método proposto.
 \end_layout
 
 \begin_layout Standard

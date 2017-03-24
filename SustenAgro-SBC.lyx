@@ -26,7 +26,7 @@ urlcolor=blue
 
 \title{SustenAgro Sistema de Apoio à Decisão baseado em Ontologias e definido por uma Linguagem de Domínio Especifico.}
 
-\author{John F. Garavito\inst{1}, Dilvan de A. Moreria\inst{1} e Katia R. Evaristo\inst{2}}
+\author{John F. Garavito S.\inst{1}, Dilvan de A. Moreria\inst{1} e Katia R. Evaristo\inst{2}}
 
 
 \address{INSTITUTO DE CIÊNCIAS MATEMÁTICAS E DE COMPUTAÇÃO\\
@@ -1030,31 +1030,6 @@ Categorical.
 \end_layout
 
 \begin_layout Standard
-O principal componente da ontologia foram os indicadores da sustentabilidade,
- representados na classe Indicator, a Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Modelagem-de-Indicador"
-
-\end_inset
-
-, é apresentada a hierarquia de classes dos indicadores, que subdivide a
- classe Indicator em 
-\lang english
-Efficiency Indicator
-\lang brazilian
- e 
-\lang english
-Sustainability Indicator
-\lang brazilian
-, também é apresentado o indicador 
-\lang english
-Adequacy of Boilers
-\lang brazilian
- com as propriedades dele a maneira de exemplo.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -1095,6 +1070,31 @@ name "fig:Modelagem-de-Indicador"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+O principal componente da ontologia foram os indicadores da sustentabilidade,
+ representados na classe Indicator, a Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Modelagem-de-Indicador"
+
+\end_inset
+
+, é apresentada a hierarquia de classes dos indicadores, que subdivide a
+ classe Indicator em 
+\lang english
+Efficiency Indicator
+\lang brazilian
+ e 
+\lang english
+Sustainability Indicator
+\lang brazilian
+, também é apresentado o indicador 
+\lang english
+Adequacy of Boilers
+\lang brazilian
+ com as propriedades dele a maneira de exemplo.
 \end_layout
 
 \begin_layout Standard
