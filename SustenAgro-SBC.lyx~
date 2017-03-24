@@ -8,6 +8,15 @@
 \begin_preamble
 \usepackage{sbc-template/sbc-template}
 \usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+pdfborder = {0 0 0},
+colorlinks ,
+citecolor=blue,
+filecolor=blue,
+linkcolor=blue,
+urlcolor=blue
+}
 %\usepackage[latin1]{inputenc}  
 %\usepackage[brazil]{babel}
 % UTF-8 encoding is recommended by ShareLaTex
@@ -58,7 +67,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize 12
-\spacing onehalf
+\spacing single
 \use_hyperref false
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -132,20 +141,10 @@ maketitle
 \end_layout
 
 \begin_layout Abstract
-This meta-paper describes the style to be used in articles and short papers
- for SBC conferences.
- For papers in English, you should add just an abstract while for the papers
- in Portuguese, we also ask for an abstract in Portuguese (
-\begin_inset Quotes eld
-\end_inset
 
-resumo
-\begin_inset Quotes erd
-\end_inset
-
-).
- In both cases, abstracts should not have more than 10 lines and must be
- in the first page of the paper.
+\lang english
+Sustainability assessment process
+\lang brazilian
  
 \end_layout
 
@@ -178,8 +177,8 @@ begin{resumo}
 
 \end_inset
 
- O processo de avaliação da sustentabilidade é caracterizado pela complexidade,
- interdisciplinariedade e continua mudança.
+ O processo de avaliação da sustentabilidade em agricultura é caracterizado
+ pela complexidade, interdisciplinariedade e continua mudança.
  Pelo qual especialistas em sustentabilidade da Embrapa Meio Ambiente definiram
  o método SustenAgro de avaliação da sustentabilidade em cana-de-açúcar.
  A implementação deste método no Sistema de Apoio à Decisão (SAD 
@@ -190,11 +189,11 @@ description "Sistema de Apoio à Decisão"
 
 \end_inset
 
-) intitulado SustenAgro permitiu identificar o problema da inexistência
+) intitulado SustenAgro, permitiu identificar o problema da inexistência
  de um meio de representação de conhecimento para definir SADs de avaliação.
- Em este artigo, apresentamos um método de definição do conhecimento proposto
- através da implementação do SAD SustenAgro que foi baseado em uma ontologia
- da web Semântica e uma 
+ Em este artigo, apresentamos um método de definição do conhecimento dos
+ especialistas implementado no do SAD SustenAgro que foi baseado em uma
+ ontologia da web Semântica e uma 
 \lang english
 Domain Specific Language
 \lang brazilian

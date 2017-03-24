@@ -8,6 +8,15 @@
 \begin_preamble
 \usepackage{sbc-template/sbc-template}
 \usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+pdfborder = {0 0 0},
+colorlinks ,
+citecolor=blue,
+filecolor=blue,
+linkcolor=blue,
+urlcolor=blue
+}
 %\usepackage[latin1]{inputenc}  
 %\usepackage[brazil]{babel}
 % UTF-8 encoding is recommended by ShareLaTex
@@ -58,7 +67,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize 12
-\spacing onehalf
+\spacing single
 \use_hyperref false
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -132,42 +141,19 @@ maketitle
 \end_layout
 
 \begin_layout Abstract
-O processo de avaliação da sustentabilidade é caracterizado pela complexidade,
- interdisciplinariedade e continua mudança.
- Pelo qual especialistas em sustentabilidade da Embrapa Meio Ambiente definiram
- o método SustenAgro de avaliação da sustentabilidade em cana-de-açúcar.
- A implementação deste método no Sistema de Apoio à Decisão (SAD 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "SAD"
-description "Sistema de Apoio à Decisão"
 
-\end_inset
-
-) intitulado SustenAgro permitiu identificar o problema da inexistência
- de um meio de representação de conhecimento para definir SADs de avaliação.
- Em este artigo, apresentamos um método de definição do conhecimento proposto
- através da implementação do SAD SustenAgro que foi baseado em uma ontologia
- da web Semântica e uma 
 \lang english
-Domain Specific Language
-\lang brazilian
- (
-\lang english
-DSL
-\lang brazilian
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "DSL"
-description "Domain Specific Language"
-
-\end_inset
-
-).
- Também será apresentada a avaliação dos especialistas ao usar o método
- para definir o SAD SustenAgro.
- 
+Sustainability assessment process in agriculture is characterized by complexity,
+ interdisciplinary and continuous changes.
+ By which sustainability experts of Embrapa Environment defined the SustenAgro
+ Method of sustainability assessment in sugarcane.
+ The implementation of this method into Decision Support System (DSS) entitled
+ SustenAgro, identified the problem of the lack of a means of representation
+ of knowledge to define evaluation DSSs.
+ In this paper, we present a method of definition of expert's knowledge
+ implemented in the DSS SustenAgro, that was based on a Semantic Web Ontology
+ and a Domain-Specific language (DSL).
+ Finally will be presented the expert's evaluation of proposed method.
 \end_layout
 
 \begin_layout Abstract
@@ -199,8 +185,8 @@ begin{resumo}
 
 \end_inset
 
- O processo de avaliação da sustentabilidade é caracterizado pela complexidade,
- interdisciplinariedade e continua mudança.
+ O processo de avaliação da sustentabilidade em agricultura é caracterizado
+ pela complexidade, interdisciplinariedade e continua mudança.
  Pelo qual especialistas em sustentabilidade da Embrapa Meio Ambiente definiram
  o método SustenAgro de avaliação da sustentabilidade em cana-de-açúcar.
  A implementação deste método no Sistema de Apoio à Decisão (SAD 
@@ -211,11 +197,11 @@ description "Sistema de Apoio à Decisão"
 
 \end_inset
 
-) intitulado SustenAgro permitiu identificar o problema da inexistência
+) intitulado SustenAgro, permitiu identificar o problema da inexistência
  de um meio de representação de conhecimento para definir SADs de avaliação.
- Em este artigo, apresentamos um método de definição do conhecimento proposto
- através da implementação do SAD SustenAgro que foi baseado em uma ontologia
- da web Semântica e uma 
+ Em este artigo, apresentamos um método de definição do conhecimento dos
+ especialistas implementado no do SAD SustenAgro, que foi baseado em uma
+ ontologia da web Semântica e uma 
 \lang english
 Domain Specific Language
 \lang brazilian
@@ -232,8 +218,7 @@ description "Domain Specific Language"
 \end_inset
 
 ).
- Também será apresentada a avaliação dos especialistas ao usar o método
- para definir o SAD SustenAgro.
+ Finalmente será apresentada a avaliação dos especialistas do método proposto.
 \end_layout
 
 \begin_layout Standard
