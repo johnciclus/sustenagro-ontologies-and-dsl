@@ -6,11 +6,11 @@
 \origin unavailable
 \textclass elsarticle
 \begin_preamble
-\usepackage{graphicx}
-\usepackage{amssymb}
+%\usepackage{graphicx}
+%\usepackage{amssymb}
 %\journal{Journal Name}
 \end_preamble
-\options 5p,authoryear
+\options authoryear
 \use_default_options true
 \maintain_unincluded_children false
 \language brazilian
@@ -33,7 +33,7 @@
 \bibtex_command bibtex
 \index_command default
 \float_placement h
-\paperfontsize default
+\paperfontsize 12
 \spacing onehalf
 \use_hyperref false
 \pdf_bookmarks true
@@ -79,7 +79,7 @@
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
-\papercolumns 2
+\papercolumns 1
 \papersides 2
 \paperpagestyle default
 \tracking_changes false
@@ -271,7 +271,7 @@ Introdução
 \begin_layout Standard
 Os especialistas da Embrapa Meio Ambiente desenvolveram o método SustenAgro
  que permite avaliar a sustentabilidade no sistema produtivo de cana-de-açúcar
- no centro-sul do Brasil
+ no centro-sul do Brasil 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "oliveira:2013"
@@ -279,44 +279,37 @@ key "oliveira:2013"
 \end_inset
 
 .
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Com a finalidade de disponibilizar uma implementação do método para que
- os usuários possam usá-lo através da web, foi requerido o desenvolvimento
- do SAD SustenAgro.
 \end_layout
+
+\begin_layout Standard
+Este método foi implementado para fornecer um SAD na web 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Tweedale2016"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-No processo de desenvolvimento do SAD, foi identificado que as ontologias
- da web semântica permitem modelar o conhecimento, inclusive quando ele
- é complexo como acontece na sustentabilidade.
- Porém, devido à continua mudança do conhecimento foram procurados outros
- métodos que facilitem a definição de conhecimento por parte dos especialistas.
-\end_layout
-
-\begin_layout Standard
-A partir desta experiencia foi identificado o problema da inexistência de
- um meio de representação de conhecimento para definir SADs de avaliação,
+, que permita avaliar a sustentabilidade.
+ A partir desta experiencia foi identificado o problema da inexistência
+ de um meio de representação de conhecimento para definir SADs de avaliação,
  que tenha um formato computável, entendível e acessível pelos especialistas
  do domínio.
- 
 \end_layout
 
 \begin_layout Standard
 No presente trabalho é apresentado um método de definição de conhecimento
- no SAD SustenAgro que permite aos especialistas do domínio definir as funcional
-idades desse SAD.
+ dos especialistas no SAD SustenAgro que permitir a definição das funcionalidade
+s desse SAD.
  O método de definição está baseado em ontologias e uma 
 \lang english
-DSL
+DSL 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "fowler2010domain"
+
+\end_inset
+
+
 \lang brazilian
  desenvolvida para suportar os conceitos de avaliação da sustentabilidade
  em agricultura.
@@ -339,7 +332,7 @@ Objetivo
 
 \begin_layout Standard
 O objetivo deste trabalho foi suportar e facilitar a definição de conhecimento
- dos especialistas em sustentabilidade no SAD SustenAgro.
+ dos especialistas em sustentabilidade no SAD SustenAgro .
  
 \end_layout
 
@@ -468,9 +461,10 @@ key "Tweedale2016"
 \end_layout
 
 \begin_layout Standard
-O SAD SustenAgro suporta a avaliação da sustentabilidade no sistema produtivo
- de cana-de-açúcar e fornece recomendações para que os usuários tomem decisões
- em vários aspectos das unidades produtivas (usinas e fazendas produtoras).
+O SAD SustenAgro implementa o método SustenAgro suportando a avaliação da
+ sustentabilidade no sistema produtivo de cana-de-açúcar e fornece recomendações
+ para que os usuários tomem decisões em vários aspectos das unidades produtivas
+ (usinas e fazendas produtoras).
 \end_layout
 
 \begin_layout Standard
@@ -513,12 +507,13 @@ key "Evans:2003:DDT:861502"
 
 \end_inset
 
- explica que existe uma necessidade de modelar o conhecimento chave de um
- domínio em um modelo, para permitir a comunicação e colaboração entre especiali
-stas de domínio e os desenvolvedores.
+ explica que no desenvolvimento de software existe a necessidade de modelar
+ o conhecimento chave de um domínio em um modelo, para permitir a comunicação
+ e colaboração entre especialistas de domínio e os desenvolvedores.
  Pelo qual o modelo de representação de conhecimento dos especialistas foi
- o objeto de pesquisa, a procura de modelos permitiu identificar que as
- ontologias da web semântica satisfazem tais requisitos de modelagem 
+ o objeto de pesquisa, a procura de sistemas de representação de conhecimento
+ permitiu identificar que as ontologias da web semântica satisfazem tais
+ requisitos de modelagem 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "bernerslee2001"
@@ -539,10 +534,34 @@ key "simon1991architecture"
 
 , integram o conhecimento de diferentes fontes e flexibilizam os modelos
  ante as mudanças.
+ Porém, devido à exigência de conhecimento de modelagem de ontologias, foram
+ procurados outros métodos que complementem a definição de conhecimento
+ por parte dos especialistas.
+ 
 \end_layout
 
 \begin_layout Standard
-A continuação será apresentada a métodologia de desenvolvimento do SAD SustenAgr
+Nessa procura, foram identificadas as DSL, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+No processo de desenvolvimento do SAD, foi identificado que as ontologias
+ da web semântica permitem modelar o conhecimento, inclusive quando ele
+ é complexo como acontece na sustentabilidade.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuação será apresentada a metodologia de desenvolvimento do SAD SustenAgr
 o e da Ontologia.
 \end_layout
 
