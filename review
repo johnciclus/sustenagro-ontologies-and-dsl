@@ -1,0 +1,229 @@
+Prezado John Freddy Garavito Suárez:
+
+Foi tomada uma decisão sobre o artigo "SustenAgro Sistema de Apoio à
+Decisão baseado em Ontologias e definido por uma Linguagem de Domı́nio
+Especifico", enviado à revista iSys - Revista Brasileira de Sistemas de
+Informação.
+
+De acordo com os comentários dos avaliadores, são necessárias correções
+e submissão para uma nova rodada de avaliações antes que o artigo possa
+ser considerado para publicação. Esperamos que as revisões dos
+avaliadores ajudem a melhorar seu trabalho.
+
+Caso os autores estejam preparados para efetuar as alterações
+necessárias, o prazo para conclusão das alterações e reenvio do artigo
+é dia 16/10/2017. Junto com o artigo deve ser enviada uma carta de resposta
+aos comentários dos avaliadores.
+
+Atenciosamente,
+
+Andre Pimenta Freire
+UFLA
+apfreire@gmail.com
+------------------------------------------------------
+Avaliador C:
+
+Este artigo relata o desenvolvimento de um sistema para apoio a decisão em
+sustentabilidade em agricultura.
+
+O sistema é baseado na agregação de indicadores com fórmulas que podem
+ser descritas em uma linguagem específica de domínio. Uma ontologia OWL é
+proposta para o domínio de indicadores.
+
+A introdução é inadequada, pois não revela as
+motivações/justificativas para o trabalho, além de "não foram
+encontrados na literatura trabalhos sobre esse tipo de metodologia". Além
+disso, a introdução não esclarece qual a metodologia empregada. O leitor
+é informado de que será usada uma DSL, mas não se sabe exatamente para
+que propósito. Também é mencionado o uso de uma ontologia, mas seu papel
+não está claro na introdução.
+
+A seção 2 repete algumas dessas informações da introdução sem
+adicionar muito nos primeiros parágrafos. "Conhecimento" é discutido de
+uma forma vaga. "Esse conhecimento" se refere a o que? Os autores mencionam
+que "durante a pesquisa bibliográfica, procurou-se trabalhos sobre DSLs em
+agricultura e não foram identificados trabalhos relevantes para nosso
+objeto de pesquisa.". Sugere-se aos autores que considerem também como
+trabalho relacionado qualquer trabalho que manipule indicadores
+independentemente da área de aplicação. Afinal, a DSL não parece ter uma
+dependência com o domínio em questão.
+
+A ontologia é superficial quanto à semântica dos vários indicadores, e o
+seu processo de elaboração e validação não está claramente descrito no
+trabalho. (Há um conceito "Categorical" mencionado no texto que não
+aparece nas figuras.)
+
+O nível de detalhamento da DSL é insuficiente para avaliação. A sintaxe
+e a semântica não são discutidas explicitamente.
+
+A relação entre os elementos da ontologia e da DSL não é discutida. O
+uso da ontologia codificada não parece transcender aquilo que se poderia
+obter com um modelo conceitual qualquer. (O que quer dizer a seta entre a
+ontologia e o "Contoller" [sic] na figura 1?
+
+Não me parece haver contribuição científica clara que justifique
+publicação do material em um periódico. Recomenda-se aos autores
+explicitar as questões de pesquisa e enfatizar como o trabalho avança o
+estado da arte. A contribuição deve ir além de relatar o desenvolvimento
+de uma DSL, e o uso (habitual) de um modelo de domínio.
+
+ 
+
+
+------------------------------------------------------
+
+------------------------------------------------------
+Avaliador D:
+
+O artigo traz uma contribuição interessante, uma metodologia para
+implementar um Sistema de apoio a decisão. Porém o artigo deve e acho que
+há espaço para detalhar a metodologia e sua implementação. Os passos da
+metodologia  são apresentados reumidamente na seção 3.4 em 3 passos.
+Acho que como a principal contribuicao poderia ser mais detalhado.
+
+A avaliação do artigo tb foi brevemente descrita, e faltam elementos
+importantes, como os critérios usados e valores dados, além de uma
+apresentação mais específica dos usuários avaliadores. Especialistas de
+onde?  A parte de definição de indicadores, de especificação da
+ontologia, e de definição dos relatórios nao foi avaliada.
+
+Por fim, o aritgo apresenta vários erros de português apontados no arquivo
+em anexo.
+
+Em resumo, o artigo apresenta a implementação de um Sistema de apoio a
+decisao relevante, utilizando tecnologias e linguagens atuais, mostrando a
+sua aplicacao em caso real, o que é de fato também uma ótima
+contribuição. Porém, para valorizar a contribuição relacioanada ao
+método apresentado, sugiro detalhar mais esta parte, e ainda a sua
+avaliação.
+
+
+------------------------------------------------------
+
+------------------------------------------------------
+Avaliador E:
+
+- No título, substituir "... Especifico" por "... Específico".
+
+
+- No Resumo
+ * substituir "... continua mudança ..." por "... contínua mudança ...".
+ * "o método SustenAgro" É método ou um sistema de apoio a decisão?
+ * "é apresentada uma metodologia" Mas, o título "informa" um sistema de
+apoio a decisão!?
+ * "Web Onology Language - OWL" Sigla não corresponde.
+ * Há a utilização de "SustenAgro" para SAD, método, metodologia, ... o
+que causa confusão ao Leitor. Sugestão: melhorar a apresentação no
+texto. Isso acontece ao longo do texto do artigo.
+
+
+- Na Seção 1
+ * "Para implementar esse método, ... foi desenvolvida uma metodologia ..."
+Confuso, metodologia implementa método? Definir um SAD? Não seria
+implementar um sistema?
+ * Acho que há problemas conceituais. É necessário ter mais formalismo!
+ * "Já que não foram encontrados na literatura trabalhos sobre esse tipo
+de metodologia." Frase solta. Qual é a oração principal?
+ * "Também são mostrados resultados da avaliação desse método. por
+especialistas da Embrapa, mostrando a sua eficiencia na criação de um
+SAD." Explicar melhor! A avaliação mostra eficiência na criação de um
+SAD? Além disso, há um ponto (".") no meio da frase.
+
+
+- Na Seção 2
+ * A Seção 2 não está bem estruturada. O objetivo deve aparecer na
+Seção 1. A Seção 2 deve ser destinadaaos trabalhos relacionados.
+ * Deve-se ter um parágrafo para explicitar qual é a contribuição
+(diferencial) do artigo frente aos trabalhos relacionados.
+ * "não foram identificados trabalhos relevantes" Afirmação muito forte!
+
+
+- Na Seção 3.1
+ * Substiuir "... tem o proposito de ..." por "... tem o propósito de ..."
+ * "A metodologia de desenvolvimento de software que direcionou o
+desenvolvimento do SAD SustenAgro foi a SCRUM ..." SCRUM é uma metodologia
+de desenvolvimento?? Não seria SCRUM uma forma de gerência ágil de
+projetos? Acho que é isso! Não foram apresentados indícios que SCRUM foi
+utilizado. Seria necessário realmente utilizar SCRUM?
+
+
+- Na Seção 3.2
+ * Não encontrei o conceito "Categorical" na Figura 2. Favor, verificar.
+
+
+- Na Seção 3.3
+ * Substituir "... e contem termos familiares ..." por "... e contém termos
+familiares ..."
+ * Substituir "... são a expressividade, facilidade de uso e a integração
+..." por "... são a expressividade, a facilidade de uso e a integração
+..."
+ * Substituir "Definir as fórmulas e procedimentos ..." por "Define as
+fórmulas e os procedimentos ..."
+ * "as fórmulas e procedimentos matemáticas necessários" Acho que falta
+alguma palavra ou há inconsistência no Português. Favor, verificar.
+ * Substituir "... que apresenta os índices ..." por "... que apresentam os
+índices ..."
+ * Explicar a importância do "Quadrant" na Figura 4.
+
+
+- Na Seção 3.3
+ * Substituir "... descritos na seguinte sequencia:" por "... descritos na
+seguinte sequência:"
+ * Substituir "... das classes e indivíduos do domínio ..." por "... das
+classes e dos indivíduos do domínio ..."
+
+
+- Na Seção 4
+ * Substituir "Os avaliações incluiram:" por "As avaliações incluiram:".
+Ainda nessa frase, espera-se um conjunto de itens (pois, há dois pontos
+(":")), mas foram apresentadas seções. Sugiro ajustar.
+
+
+- Na Seção 4.1
+ * "explicado na Seção ??" Faltou!?!?
+ * Substituir "Nessa avaliação foi apresentado, ..." por "Nessa
+avaliação, foram apresentados, ..."
+ * "A avaliação foi positiva ..." Por que a avaliação foi positiva? O
+que é "avaliação positiva"?
+ * "... cumprindo requisitos de usabilidade." Quais são esses requisitos?
+ * "Esta avaliação gerou várias recomendações ..." Quais foram essas
+recomendações? Qual a importância delas? Todas foram atendidas? Por que
+foram atendidas (as vezes, pode ter viés de uma pessoa/avaliador)?
+ * Explicar como foram realizadas as avaliações (foram utilizadas
+técnicas, heurísticas, ...).
+ * Substituir "... de avaliação, foi realizada ..." por "... de
+avaliação foi realizada ..."
+
+- Na Seção 5
+ * Falta apresentar limitações (por exemplo, especialistas do domínio
+têm facilidade de trabalhar com ontologias e com a ferramenta utilizada
+para representá-las?).
+ * Faltam sugestões de trabalhos futuros.
+
+- Falta uma seção para apresentar ameaças a validade (Interna, Externa,
+por Construção, por Conclusão).
+
+
+- Tornar mais clara a utilização de ontologias para o desenvolvimeno de um
+sistema (Será que os Autores utilizaram a "ferramenta" adequada? Será que
+foi utilizado "um canhão para matar uma formiga"?
+
+
+- Ao longo do texto
+ * Há a utilização de "SustenAgro" para SAD, método, metodologia, ... o
+que causa confusão ao Leitor. Sugestão: melhorar a apresentação no
+texto. Isso acontece ao longo do texto do artigo.
+ * Não usar a expressão "já que".
+ * Não usar a palavra "já".
+ * Funcionalidade é um conjunto de funções. Assim, a sugestão é usar
+"funcionalidade" (no singular) ou "funções".
+ * Há afirmações fortes sem apoio de uma análise nem da literatura
+(referências bibliográficas), o que pode prejudicar o artigo.
+ * Náo ter parágrafos com apenas uma frase.
+ * Substituir "numa" por "em uma".
+ * Substituir "num" por "em um".
+ * Palavras em outros idiomas devem ser grafadas em itálico.
+ * Há constante utilização da palavra "validar" (e variações). Validar
+é muito forte. A sugestão para substituir essa palavra é "avaliar".
+
+
